@@ -16,6 +16,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Routes
+app.use('/api', routes);
+
 // Database connection
 const dbConfig = {
   host: process.env.DB_HOST,
