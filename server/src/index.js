@@ -1,3 +1,8 @@
+require('dotenv').config();
+const checkEnv = require('./checkEnv');
+//Ensure all required environment variables are available
+checkEnv();
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
@@ -13,10 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Database connection
 const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: 'your_password',
-  database: 'your_database_name',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 };
 
 // Create a connection pool
