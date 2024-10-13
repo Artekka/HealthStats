@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import LipidProfiles from './components/LipidProfiles';
+import RunningMetrics from './components/RunningMetrics';
+import BodyComposition from './components/BodyComposition';
+
 function App() {
+  // In a real app, you'd get the userId from authentication
+  const userId = 1;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Health Data Dashboard</h1>
+      <LipidProfiles userId={userId} />
+      <RunningMetrics userId={userId} />
+      <BodyComposition userId={userId} />
     </div>
   );
 }
