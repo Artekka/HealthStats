@@ -54,23 +54,26 @@ const LipidProfilesChart = ({ userId }) => {
   if (!chartData) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="chart-wrapper">
       <h2>Lipid Profiles Over Time</h2>
-      <Line
-        data={chartData}
-        options={{
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'top',
+      <div className="chart-container">
+        <Line
+          data={chartData}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: 'Lipid Profiles Trend',
+              },
             },
-            title: {
-              display: true,
-              text: 'Lipid Profiles Trend',
-            },
-          },
-        }}
-      />
+          }}
+        />
+      </div>
     </div>
   );
 };

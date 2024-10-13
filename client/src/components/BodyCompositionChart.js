@@ -51,12 +51,14 @@ const BodyCompositionChart = ({ userId }) => {
   if (!chartData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h2>Body Composition Over Time</h2>
+    <div className="chart-wrapper">
+          <h2>Body Composition Over Time</h2>
+          <div className="chart-container">
       <Line
         data={chartData}
         options={{
-          responsive: true,
+            responsive: true,
+            maintainAspectRatio: false,
           interaction: {
             mode: 'index',
             intersect: false,
@@ -64,8 +66,7 @@ const BodyCompositionChart = ({ userId }) => {
           stacked: false,
           plugins: {
             title: {
-              display: true,
-              text: 'Body Composition Trend',
+              display: false,
             },
           },
           scales: {
@@ -93,7 +94,8 @@ const BodyCompositionChart = ({ userId }) => {
           },
         }}
       />
-    </div>
+        </div>
+        </div>
   );
 };
 
