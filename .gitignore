@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 */node_modules/
+server/index.js
 
 # Production build files
 /build
