@@ -26,7 +26,7 @@ const RunningMetrics = ({ userId }) => {
 
   return (
     <div>
-      <h2>Lipid Profiles</h2>
+      <h2>Running Metrics</h2>
       {profiles.map((profile) => (
         <div key={profile.id}>
           <p>Date: {new Date(profile.timestamp).toLocaleDateString()}</p>
