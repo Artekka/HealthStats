@@ -1,9 +1,9 @@
 import './App.css';
 
 import React from 'react';
-import LipidProfiles from './components/LipidProfiles';
-import RunningMetrics from './components/RunningMetrics';
-import BodyComposition from './components/BodyComposition';
+import LipidProfilesChart from './components/LipidProfilesChart';
+import RunningMetricsChart from './components/RunningMetricsChart';
+import BodyCompositionChart from './components/BodyCompositionChart';
 import HealthDataForm from './components/HealthDataForm';
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
       <h1>Health Data Dashboard</h1>
-      <LipidProfiles userId={userId} />
-      <RunningMetrics userId={userId} />
-      <BodyComposition userId={userId} />
+      <LipidProfilesChart userId={userId} />
+      <RunningMetricsChart userId={userId} />
+      <BodyCompositionChart userId={userId} />
       <HealthDataForm userId={userId} />
     </div>
   );
