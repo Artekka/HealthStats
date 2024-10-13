@@ -13,6 +13,7 @@ server/index.js
 .env.development.local
 .env.test.local
 .env.production.local
+HealthStats.code-workspace
 
 # Logs
 npm-debug.log*
